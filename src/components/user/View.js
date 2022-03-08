@@ -8,7 +8,8 @@ export default function User () {
     username: "",
     email: "",
     phone: "",
-    webiste: ""
+    website: "",
+    gender:""
   });
   const { id } = useParams();
 
@@ -32,7 +33,8 @@ export default function User () {
         <li className="list-group-item">user name: {user.username}</li>
         <li className="list-group-item">email: {user.email}</li>
         <li className="list-group-item">phone: {user.phone}</li>
-        <li className="list-group-item">website: {user.webiste}</li>
+        <li className="list-group-item">website: {user.website}</li>
+        <li className="list-group-item">gender: {user.gender}</li>
       </ul>
     </div> 
   );

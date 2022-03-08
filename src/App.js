@@ -10,6 +10,7 @@ import Update from './components/user/Update';
 import View from './components/user/View';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
 function App() {
   return (
     <div className="App">
@@ -33,12 +34,7 @@ function App() {
         draggable
         pauseOnHover
       />
-      {/* Same as */}
       <ToastContainer />
-      {/* <Home/>
-     <About/>
-     <Contact/> */}
-
     </div>
   );
 }

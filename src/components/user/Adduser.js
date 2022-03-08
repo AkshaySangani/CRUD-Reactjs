@@ -7,12 +7,13 @@ export default function AddUser() {
   const [user, setUser] = useState({
     name: "",
     username: "",
-    email: "",  
+    email: "",
     phone: "",
-    website: ""
+    website: "",
+    gender:""
   });
 
-  const { name, username, email, phone, website } = user;
+  const { name, username, email, phone, website} = user;
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -57,6 +58,21 @@ export default function AddUser() {
               onChange={e => onInputChange(e)}
             />
           </div>
+          <div className="form-group d-flex">
+            <label>Gender:</label>
+            <div className="form-check">
+              <input className="form-check-input" type="radio" value={"male"} name="gender" id="flexRadioDefault1" onChange={e => onInputChange(e)}/>
+              <label className="form-check-label" for="flexRadioDefault1">
+                male
+              </label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="radio" value={"female"} name="gender" id="flexRadioDefault2" onChange={e => onInputChange(e)}  />
+              <label className="form-check-label" for="flexRadioDefault2">
+                female
+              </label>
+            </div>
+          </div>
           <div className="form-group">
             <input
               type="text"
@@ -74,9 +90,9 @@ export default function AddUser() {
               placeholder="Enter Your Website Name"
               name="website"
               value={website}
-              onChange={e => onInputChange(e)} 
-             /> 
-           </div>
+              onChange={e => onInputChange(e)}
+            />
+          </div>
           <button className="btn btn-primary btn-block">Add User</button>
         </form>
       </div>

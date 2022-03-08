@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import {  toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 export default function EditUser() {
@@ -12,10 +12,11 @@ export default function EditUser() {
     username: "",
     email: "",
     phone: "",
-    website: ""
+    website: "",
+    gender: ""
   });
 
-  const { name, username, email, phone, website } = user;
+  const { name, username, email, phone, website,gender } = user;
   const onInputChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
@@ -36,7 +37,7 @@ export default function EditUser() {
       pauseOnHover: true,
       draggable: true,
       progress: undefined,
-      });
+    });
   };
 
   const loadUser = async () => {
@@ -48,7 +49,7 @@ export default function EditUser() {
       <div className="w-75 mx-auto shadow p-5">
         <h2 className="text-center mb-4">Edit A User</h2>
         <form onSubmit={e => onSubmit(e)}>
-          <div className="form-group">
+          <div className="form-group my-2">
             <input
               type="text"
               className="form-control form-control-lg"
@@ -58,7 +59,7 @@ export default function EditUser() {
               onChange={e => onInputChange(e)}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group my-2">
             <input
               type="text"
               className="form-control form-control-lg"
@@ -68,7 +69,7 @@ export default function EditUser() {
               onChange={e => onInputChange(e)}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group my-2">
             <input
               type="email"
               className="form-control form-control-lg"
@@ -78,7 +79,22 @@ export default function EditUser() {
               onChange={e => onInputChange(e)}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group d-flex">
+            <label>Gender:</label>
+            <div className="form-check">
+              <input className="form-check-input" type="radio" value={"male"} checked={gender === "male" ? true:false} name="gender" id="flexRadioDefault1" onChange={e => onInputChange(e)} />
+              <label className="form-check-label" for="flexRadioDefault1">
+                male
+              </label>
+            </div>
+            <div className="form-check">
+              <input className="form-check-input" type="radio" value={"female"} name="gender" checked={gender === "female" ? true:false} id="flexRadioDefault2" onChange={e => onInputChange(e)} />
+              <label className="form-check-label" for="flexRadioDefault2">
+                female
+              </label>
+            </div>
+          </div>
+          <div className="form-group my-2">
             <input
               type="text"
               className="form-control form-control-lg"
@@ -88,7 +104,7 @@ export default function EditUser() {
               onChange={e => onInputChange(e)}
             />
           </div>
-          <div className="form-group">
+          <div className="form-group my-2">
             <input
               type="text"
               className="form-control form-control-lg"
@@ -98,7 +114,8 @@ export default function EditUser() {
               onChange={e => onInputChange(e)}
             />
           </div>
-          <button className="btn btn-warning btn-block">Update User</button>
+          <div className="form-group my-2 text-center">
+          <button className="btn btn-warning btn-block ">Update User</button></div>
         </form>
       </div>
     </div>
