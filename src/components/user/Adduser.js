@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import axios from 'axios'
 import { useNavigate } from "react-router-dom";
 
-const AddUser = () => {
+export default function AddUser() {
   let navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     username: "",
     email: "",  
-    // phone: "",
-    // website: ""
+    phone: "",
+    website: ""
   });
 
   const { name, username, email, phone, website } = user;
@@ -57,7 +57,7 @@ const AddUser = () => {
               onChange={e => onInputChange(e)}
             />
           </div>
-          {/* <div className="form-group">
+          <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg"
@@ -74,14 +74,12 @@ const AddUser = () => {
               placeholder="Enter Your Website Name"
               name="website"
               value={website}
-              onChange={e => onInputChange(e)} */}
-            {/* /> */}
-          {/* </div> */}
+              onChange={e => onInputChange(e)} 
+             /> 
+           </div>
           <button className="btn btn-primary btn-block">Add User</button>
         </form>
       </div>
     </div>
   );
 };
-
-export default AddUser;

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
-const User = () => {
+export default function User () {
   const [user, setUser] = useState({
     name: "",
     username: "",
@@ -14,7 +14,7 @@ const User = () => {
 
   useEffect(() => {
     loadUser();
-  }, [])
+  },[]) // some error handling
 
   const loadUser = async () => {
     const res = await axios.get(`http://localhost:3003/users/${id}`);
@@ -38,4 +38,3 @@ const User = () => {
   );
 };
 
-export default User;

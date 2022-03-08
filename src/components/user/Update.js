@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
-import { ToastContainer, toast } from 'react-toastify';
+import {  toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-const EditUser = () => {
+
+export default function EditUser() {
   let navigate = useNavigate();
   const { id } = useParams();
   const [user, setUser] = useState({
     name: "",
     username: "",
     email: "",
-    // phone: "",
-    // website: ""
+    phone: "",
+    website: ""
   });
 
   const { name, username, email, phone, website } = user;
@@ -77,7 +78,7 @@ const EditUser = () => {
               onChange={e => onInputChange(e)}
             />
           </div>
-          {/* <div className="form-group">
+          <div className="form-group">
             <input
               type="text"
               className="form-control form-control-lg"
@@ -96,7 +97,7 @@ const EditUser = () => {
               value={website}
               onChange={e => onInputChange(e)}
             />
-          </div> */}
+          </div>
           <button className="btn btn-warning btn-block">Update User</button>
         </form>
       </div>
@@ -104,4 +105,3 @@ const EditUser = () => {
   );
 };
 
-export default EditUser;
