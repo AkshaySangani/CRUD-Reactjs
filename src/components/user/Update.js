@@ -83,13 +83,13 @@ export default function EditUser() {
             <label>Gender:</label>
             <div className="form-check">
               <input className="form-check-input" type="radio" value={"male"} checked={gender === "male" ? true:false} name="gender" id="flexRadioDefault1" onChange={e => onInputChange(e)} />
-              <label className="form-check-label" for="flexRadioDefault1">
+              <label className="form-check-label" htmlFor="flexRadioDefault1">
                 male
               </label>
             </div>
             <div className="form-check">
               <input className="form-check-input" type="radio" value={"female"} name="gender" checked={gender === "female" ? true:false} id="flexRadioDefault2" onChange={e => onInputChange(e)} />
-              <label className="form-check-label" for="flexRadioDefault2">
+              <label className="form-check-label" htmlFor="flexRadioDefault2">
                 female
               </label>
             </div>

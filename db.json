@@ -21,7 +21,8 @@
         "name": "Johns Group",
         "catchPhrase": "Configurable multimedia task-force",
         "bs": "generate enterprise e-tailers"
-      }
+      },
+      "gender": "female"
     },
     {
       "id": 8,
@@ -198,6 +199,33 @@
       "website": "mews-monkey.com/owener",
       "gender": "female",
       "id": 22
+    },
+    {
+      "name": "fgfh",
+      "username": "fh",
+      "email": "fh@gmaail.com",
+      "phone": "1113214555",
+      "website": "hjh.in",
+      "gender": "male",
+      "id": 23
+    },
+    {
+      "name": "hii",
+      "username": "hu",
+      "email": "aaaa@djskd.com",
+      "phone": "1113214555",
+      "website": "mews-monkey.com/owener",
+      "gender": "male",
+      "id": 24
+    },
+    {
+      "name": "hii",
+      "username": "dscdsc",
+      "email": "",
+      "phone": "",
+      "website": "",
+      "gender": "",
+      "id": 25
     }
   ]
 }
