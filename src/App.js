@@ -11,32 +11,66 @@ import View from './components/user/View';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function App() {
-  return (
-    <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/user/add" element={<Adduser />} />
-        <Route path="/user/update/:id" element={<Update />} />
-        <Route path="/user/:id" element={<View />} />
-      </Routes>
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
-      <ToastContainer />
-    </div>
-  );
-}
+// function App() {
+//   return (
+//     <div className="App">
+//       <Navbar />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/about" element={<About />} />
+//         <Route path="/contact" element={<Contact />} />
+//         <Route path="/user/add" element={<Adduser />} />
+//         <Route path="/user/update/:id" element={<Update />} />
+//         <Route path="/user/:id" element={<View />} />
+//       </Routes>
+//       <ToastContainer
+//         position="top-right"
+//         autoClose={5000}
+//         hideProgressBar={false}
+//         newestOnTop={false}
+//         closeOnClick
+//         rtl={false}
+//         pauseOnFocusLoss
+//         draggable
+//         pauseOnHover
+//       />
+//       <ToastContainer />
+//     </div>
+//   );
+// }
 
-export default App;
+// export default App; 
+
+import React, { Component } from 'react'
+
+export default class App extends Component {
+  render() {
+    return (
+      
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/user/add" element={<Adduser />} />
+            <Route path="/user/update/:id" element={<Update />} />
+            <Route path="/user/:id" element={<View />} />
+          </Routes>
+          <ToastContainer
+            position="top-right"
+            autoClose={5000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
+          <ToastContainer />
+        </div>
+      
+    )
+  }
+}
