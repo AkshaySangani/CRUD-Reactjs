@@ -33,6 +33,9 @@
 import React, { Component } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 export default class Navbar extends Component {
+    state = {
+        users: []
+    };
     render() {
         return (
             <div>
@@ -57,6 +60,7 @@ export default class Navbar extends Component {
                         </div>
                     </div>
                     <Link className='btn mx-3 btn-outline-light' style={{ width: "8%" }} to="/user/add">Add User</Link>
+                    <Link className='btn mx-3 btn-outline-light' style={{ width: "8%" }} to="/user/ant/add">Antd Add User</Link>
                 </nav>
             </div>
         )

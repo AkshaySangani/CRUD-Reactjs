@@ -10,6 +10,7 @@ import Update from './components/user/Update';
 import View from './components/user/View';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import 'antd/dist/antd.css'
 
 // function App() {
 //   return (
@@ -42,6 +43,8 @@ import 'react-toastify/dist/ReactToastify.css';
 // export default App; 
 
 import React, { Component } from 'react'
+import Antview from './components/user/Antview';
+import Antadd from './components/user/Antadd';
 
 export default class App extends Component {
   render() {
@@ -54,8 +57,10 @@ export default class App extends Component {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/user/add" element={<Adduser />} />
+            <Route path="/user/ant/add" element={<Antadd/>} />
             <Route path="/user/update/:id" element={<Update />} />
             <Route path="/user/:id" element={<View />} />
+            <Route path="/user/ant/:id" element={<Antview />} />
           </Routes>
           <ToastContainer
             position="top-right"

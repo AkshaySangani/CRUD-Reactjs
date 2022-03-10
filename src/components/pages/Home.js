@@ -122,6 +122,7 @@ export default class Home extends Component {
                                     <td>{user.username}</td>
                                     <td >
                                         <Link className=" btn btn-outline-primary" to={`/user/${user.id}`}>view</Link>
+                                        <Link className=" btn btn-outline-primary" to={`/user/ant/${user.id}`}>Antview</Link>
                                         <Link className=" btn btn-secondary mx-2" to={`/user/update/${user.id}`}>update</Link>
                                         <button className="btn btn-danger" onClick={() =>this.deleteUser(user.id)}>delete</button>
                                     </td>

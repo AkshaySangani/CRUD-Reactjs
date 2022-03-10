@@ -1,5 +1,5 @@
 import React from "react";
-import axios from 'axios'
+import axios from 'axios';
 import { useNavigate } from "react-router-dom";
  
 // export default function AddUser() {
@@ -105,15 +105,16 @@ function papakipari(Component) {
   return props => <Component {...props} navigate={useNavigate()} />
 }
 
-class Update extends React.Component {
+class Adduser extends React.Component {
 
   state = {
     user: {},
-  };
+  }; 
 
-  onInputChange = async (e) => {
+  onInputChange =  (e) => {
     console.log(this.state.user);
     this.setState({ user: { ...this.state.user, [e.target.name]: e.target.value } });
+    console.log("hi",this.state.user);
   };
 
   
@@ -207,4 +208,4 @@ class Update extends React.Component {
     )
   }
 }
-export default papakipari(Update)
+export default papakipari(Adduser)
