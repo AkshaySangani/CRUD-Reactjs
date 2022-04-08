@@ -12,12 +12,12 @@ const papakipari = (Component) => {
   }
  class Antadd extends React.Component {
     state = {
-        user: { name: "",
+        user: { },name: "",
         username: "",
         email: "",
         phone: "",
         website: "",
-        gender:""},
+        gender:""
       }; 
 
     onInputChange =  (e) => {
@@ -28,7 +28,7 @@ const papakipari = (Component) => {
       
 
       onSubmit = async (e) => {
-        e.preventDefault();
+        // e.preventDefault();
         await axios.post("http://localhost:3003/users/", this.state.user);
         this.props.navigate("/");
       };
@@ -107,6 +107,7 @@ const papakipari = (Component) => {
                         ]}
                     >
                         <Input name="email"
+                        type="email"
                         value={email}
                         onChange={e => this.onInputChange(e)}/>
                     </Form.Item>
